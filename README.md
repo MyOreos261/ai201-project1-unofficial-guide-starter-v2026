@@ -132,10 +132,14 @@ without reading what came before or after?
      visible. Milestone 4. -->
 
 **Question:**
+0.8246  What is the capital of Mongolia?
 
 **Answer:**
 
+Ulaanbaatar
+
 ```
+.venv/Scripts/python.exe -c "import questions; from store import search; from config import CORPUS, TOP_K; [print(f'{search(q, TOP_K, CORPUS)[0].distance:.4f}  {q}') for q in questions.OUT_OF_SCOPE]"
 ```
 
 **My relevance cutoff:**
