@@ -74,15 +74,47 @@ If you do get one, the campus does free registration and it's the only reason I 
 For each one, ask: could someone answer a question using only this,
 without reading what came before or after?
 
-**Chunk 2** — source: `` — produced by: ``
+**Chunk 2** — source: `admin_add_drop_deadline.txt#0` — produced by: `chunker.py::fallback_split`
 
-```
-```
+88 chunks total. Showing 1, spread across the corpus.
 
-**Chunk 3** — source: `` — produced by: ``
+Paste these into your README under Sample Chunks. The rubric asks
+for the source file and the function that produced them — both are
+printed for you below.
 
-```
-```
+On the add/drop deadline
+
+You can add a course through the end of the second week. Dropping is a longer window — through the end of week six — but a drop after week two shows as a W on your transcript. Nothing anywhere on the registrar's site says this plainly, and students find out from each other
+
+**Chunk 3** — source: `guide_accessibility.md#0` — produced by: `chunker.py::fallback_split`
+
+51 chunks total. Showing 1, spread across the corpus.
+
+Paste these into your README under Sample Chunks. The rubric asks
+for the source file and the function that produced them — both are
+printed for you below.
+
+# Getting around the region with limited mobility
+
+An honest assessment rather than a promotional one. Some of these places are
+difficult and it is better to know in advance.
+
+## Straightforward
+
+**Thornby Wells** is the easiest town in the region. It is flat, compact, and
+everything is within three minutes of everything else. Parking is free for two
+hours anywhere in town and the station is central. The pump room and gardens
+are level throughout.
+
+**Marchwood** has a modern tram network with level boarding on all four lines,
+running every 8 minutes on weekdays. The city museum and covered market are both
+step-free. The distances between districts are the main consideration.
+
+**Brightwater** is level along the river and through the centre. The mill museum
+is step-free. The station is a 15-
+
+For each one, ask: could someone answer a question using only this,
+without reading what came before or after?
 
 **Chunk 4** — source: `` — produced by: ``
 
