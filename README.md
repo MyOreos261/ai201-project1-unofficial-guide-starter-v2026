@@ -21,37 +21,42 @@
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
+This system answers factual questions about student life at a university, drawing on the campus_life corpus: 88 short posts (averaging 317 characters) written in the register of one student answering another. The posts cover dining halls, dorm buildings (laundry costs, noise levels), individual courses (exam formats, weekly workload), and roughly 26 one-off administrative topics such as the housing lottery, printing quotas, and add/drop deadlines.
 
-     Milestone 5. -->
+The system is built for narrow, factual lookups where the answer lives in a sentence or two — the lunch wait at a specific dining hall, whether a course is curved, what laundry costs in a given building. It does not handle comparative or subjective questions, since the corpus captures individual students' isolated observations rather than any aggregated ranking or consensus.
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** 800
+**Overlap:** 120
 
-<!-- What about YOUR documents made you pick these numbers? Short posts and
-     long sectioned guides don't want the same chunking, and "800 seemed
-     reasonable" earns nothing. Point at something you noticed when you read
-     the documents in Milestone 1.
+One document = one chunk. My corpus is 88 short posts — 178 characters at the
+shortest, 305 median, 549 at the longest — and each one is a heading followed
+by two or three paragraphs answering a single question. The Kestrel Commons
+post gives the lunch wait, the thing worth ordering, and the opening hours,
+and that's the entire document. At 317 characters on average a post is already
+about one thought, so I picked numbers that keep it intact: 600 is a ceiling
+that sits above my longest document, and overlap is 0 because nothing splits,
+so there is no shared window to describe. Declaring an overlap I don't use
+would be describing an index I don't have.
 
-     If you changed your mind partway through, say so and say why. That's worth
-     more than pretending you got it right first time.
+I changed my mind on this. The starter ships 800/120 and I assumed 800 was
+chosen to exceed documents like mine. It isn't doing that. `fallback_split`
+advances by `chunk_size - overlap`, so what triggers a split is the step, not
+the size — at 800/120 the step is 680, and that's what clears my 549-character
+maximum. I found it by running the size down: at 550 I got 91 chunks out of 88
+documents, and the three extras were pure overlap tail cut mid-word, one of
+them 31 characters reading "kends, no enforced quiet hours." With overlap 120
+I'd have needed 669, not 550, for nothing to split. Setting overlap to 0
+removes that trap instead of leaving me to remember it.
 
-     Milestone 3. -->
+What I gave up: some posts cover more than one thing. `housing_innisfree_hall.txt`
+holds the building description, the laundry prices and the noise assessment in
+a single post, so a laundry question retrieves the noise text along with it. A
+paragraph-aware splitter would separate those and my numbers would be
+different. I took the other side — at this document length, cutting a post in
+half costs more than the precision I'd gain.
 
-## Sample Chunks
-
-<!-- Five chunks, pasted as text. Label each one and name the file it came from
-     AND the function that produced it — the grader checks your code against
-     what you claim here.
-
-     `python app.py chunks -n 5` prints all three for you. Copy them straight
-     across.
-
-     Milestone 3. -->
 
 **Chunk 1** — source: `thread_bike_commute.txt#0` — produced by: `chunker.py::fallback_split`
 
