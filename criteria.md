@@ -23,8 +23,7 @@ For at least 4 of my 5 test questions, the retrieved chunks include one that
 contains the answer.
 
 **Why this target:**
-<!-- e.g. "One of my questions is about a topic only two documents mention, so
-     I expect that one to be hard." -->
+I selected 4 out of 5 (80%) to allow flexibility for potential vector similarity mismatches on questions with complex phrasing, while still ensuring the retriever consistently captures high-density context across the corpus.
 
 ---
 
@@ -33,8 +32,7 @@ contains the answer.
 Every answer the system produces names at least one source document.
 
 **Why this target:**
-<!-- Why all five and not four? What about your setup makes that achievable —
-     or what would have to go wrong for it not to be? -->
+A 100% citation rate is required because unverified claims undermine trust in an advice guide, and grounding transparency requires that every generated response links back directly to a specific source file.
 
 ---
 
@@ -50,47 +48,30 @@ in at least 4 of 5 tries.
      just keep five of them, or the "4 of 5" above has nothing to be 4 of. -->
 
 **Why this target:**
-<!-- What did your distances look like when you set the cutoff in Milestone 4?
-     Was there a clean gap, or did the two groups overlap? -->
+An 80% threshold accounts for borderline similarity scores near the cutoff distance, preventing the model from hallucinating made-up facts when presented with out-of-scope topics.
 
 ---
 
 ## 4. Something about your chunks
 
-<!-- YOU WRITE THIS ONE.
-
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
+At least 90% of generated chunks contain complete sentences without cutting off words or context mid-sentence.
 
 
 
 **Why this target:**
-
+Chopping text mid-sentence corrupts embedding semantics and drops critical context, so a 90% target ensures the chunking function respects sentence boundaries while accommodating minor formatting edge cases.
 
 
 ---
 
 ## 5. Your choice
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
+The system returns a complete, grounded answer with source citations in under 3 seconds for all 5 test questions.
 
 
 
 **Why this target:**
-
+A 3-second maximum latency is necessary to maintain an interactive user experience during real-time queries without causing timeouts in vector search or model generation.
 
 
 ---
