@@ -94,23 +94,23 @@ Paste these into your README under Sample Chunks. The rubric asks
 for the source file and the function that produced them — both are
 printed for you below.
 
-# Getting around the region with limited mobility
+Getting around the region with limited mobility
 
 An honest assessment rather than a promotional one. Some of these places are
 difficult and it is better to know in advance.
 
-## Straightforward
+Straightforward
 
-**Thornby Wells** is the easiest town in the region. It is flat, compact, and
+Thornby Wells is the easiest town in the region. It is flat, compact, and
 everything is within three minutes of everything else. Parking is free for two
 hours anywhere in town and the station is central. The pump room and gardens
 are level throughout.
 
-**Marchwood** has a modern tram network with level boarding on all four lines,
+Marchwood has a modern tram network with level boarding on all four lines,
 running every 8 minutes on weekdays. The city museum and covered market are both
 step-free. The distances between districts are the main consideration.
 
-**Brightwater** is level along the river and through the centre. The mill museum
+Brightwater is level along the river and through the centre. The mill museum
 is step-free. The station is a 15-
 
 For each one, ask: could someone answer a question using only this,
