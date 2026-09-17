@@ -53,7 +53,7 @@
 
      Milestone 3. -->
 
-**Chunk 1** — source: `` — produced by: ``
+**Chunk 1** — source: `thread_bike_commute.txt#0` — produced by: `chunker.py::fallback_split`
 
 26 chunks total. Showing 1, spread across the corpus.
 
