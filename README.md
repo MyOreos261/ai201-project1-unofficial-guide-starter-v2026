@@ -160,7 +160,12 @@ Ulaanbaatar
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| Is the housing lottery random? | Yes | 0.2541 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.8442 |
+| What is the capital of Mongolia? | No | 0.8246 |
+| Who won the 1994 World Cup? | No | 0.8859 |
+| How do I write a for loop in Rust? | No | 0.8960 |
+| How do I change the oil in a diesel engine? | No | 0.9340 |
 
 ## How I Used AI
 
@@ -174,7 +179,12 @@ Ulaanbaatar
      Milestone 5. -->
 
 **1.**
+Moment 1: Catching Python Version Incompatibility Before Package Installation
+   * What I asked for: I requested assistance setting up the virtual environment (.venv) for the starter repository.
 
+   * What came back: Inspection of .venv/pyvenv.cfg revealed that the environment was created using Python 3.14.7, which violated the Python version bounds in requirements.txt due to binary dependencies in several core packages.
+
+   * What I changed: Rather than attempting to force unsupported package installations, I deleted the environment and recreated it using Python 3.11.9. Re-running python test.py on the correct interpreter cleared every environment and package check (8 out of 10), leaving only the API key configuration outstanding.
 **2.**
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
