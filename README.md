@@ -55,8 +55,7 @@
 
 **Chunk 1** — source: `` — produced by: ``
 
-```
-```
+26 chunks total. Showing 1, spread across the corpus.
 
 **Chunk 2** — source: `` — produced by: ``
 
