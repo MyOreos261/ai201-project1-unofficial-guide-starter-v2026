@@ -121,30 +121,57 @@ is step-free. The station is a 15-
 For each one, ask: could someone answer a question using only this,
 without reading what came before or after?
 
-**Chunk 4** — source: `` — produced by: ``
+**Chunk 4** — source: `dining_pellew_dining_hall_followup.txt#0` — produced by: `chunker.py::fallback_split`
 
-```
-```
+Re: Pellew Dining Hall
 
-**Chunk 5** — source: `` — produced by: ``
+Adding to what people have said about Pellew Dining Hall. The wait figure of
+12 to 18 minutes at peak matches what I've seen. If you're trying to eat
+between classes, go before 11:45 and it's a different building entirely.
 
-```
-```
+Also worth saying: the furthest hall from anywhere, next to the athletics
+centre. Nobody tells you this at orientation.
+
+**Chunk 5** — source: `housing_innisfree_hall.txt#0` — produced by: `chunker.py::fallback_split`
+
+Innisfree Hall — what it's actually like
+
+Transferred in last year, so take this with a grain of salt. Built 1991,
+renovated 2022. Rooms are doubles arranged as pairs sharing one bathroom
+between two rooms.
+
+The good: the shared-bathroom-between-two-rooms arrangement is the best
+compromise on campus.
+
+The bad: no air conditioning, which matters for the first three weeks of
+September.
+
+Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the
+building is L-shaped and the short wing is much quieter.
 
 ## Sample Answer
 
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
-0.8246  What is the capital of Mongolia?
+Question: is the housing lottery random?
 
-**Answer:**
+Answer:
+The housing lottery is not entirely random in the way most people assume.
+While rising sophomores get a number drawn at random, juniors and seniors are
+ordered by accumulated credit hours first, with random tie-breaking used only
+for ties (*admin_housing_lottery.txt*).
 
-Ulaanbaatar
+Sources retrieved: admin_housing_lottery.txt, admin_parking_permits.txt,
+advising_registration.txt, housing_morrow_house.txt, housing_tamsin_court.txt
+
+Relevance cutoff: 0.6
+
+Out-of-corpus distances: 0.825, 0.844, 0.886, 0.896, 0.934
+In-corpus distances:     <your five questions>
 
 ```
-.venv/Scripts/python.exe -c "import questions; from store import search; from config import CORPUS, TOP_K; [print(f'{search(q, TOP_K, CORPUS)[0].distance:.4f}  {q}') for q in questions.OUT_OF_SCOPE]"
+
 ```
 
 **My relevance cutoff:**
@@ -168,15 +195,6 @@ Ulaanbaatar
 | How do I change the oil in a diesel engine? | No | 0.9340 |
 
 ## How I Used AI
-
-<!-- Two specific moments. For each: what you asked for, what came back, and
-     what you changed about it.
-
-     "I asked Claude to write the chunking function from my notes. It ignored
-     the overlap, so I added that myself" is the level of detail we're after.
-     "I used AI to help me code" is not.
-
-     Milestone 5. -->
 
 **1.**
 Moment 1: Catching Python Version Incompatibility Before Package Installation
