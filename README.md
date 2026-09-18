@@ -185,7 +185,7 @@ Moment 1: Catching Python Version Incompatibility Before Package Installation
    * What came back: Inspection of .venv/pyvenv.cfg revealed that the environment was created using Python 3.14.7, which violated the Python version bounds in requirements.txt due to binary dependencies in several core packages.
 
    * What I changed: Rather than attempting to force unsupported package installations, I deleted the environment and recreated it using Python 3.11.9. Re-running python test.py on the correct interpreter cleared every environment and package check (8 out of 10), leaving only the API key configuration outstanding.
-   * 
+     
 **2.**
   Moment 2: Validating Test Questions Against Corpus Entities and Future Evaluation Logic**
   * What I asked for: I asked the AI to review my draft test questions for
