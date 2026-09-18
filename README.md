@@ -185,8 +185,21 @@ Moment 1: Catching Python Version Incompatibility Before Package Installation
    * What came back: Inspection of .venv/pyvenv.cfg revealed that the environment was created using Python 3.14.7, which violated the Python version bounds in requirements.txt due to binary dependencies in several core packages.
 
    * What I changed: Rather than attempting to force unsupported package installations, I deleted the environment and recreated it using Python 3.11.9. Re-running python test.py on the correct interpreter cleared every environment and package check (8 out of 10), leaving only the API key configuration outstanding.
+   * 
 **2.**
-
+  Moment 2: Validating Test Questions Against Corpus Entities and Future Evaluation Logic**
+  * What I asked for: I asked the AI to review my draft test questions for
+    `questions.py` against the contents of the `campus_life` corpus.
+  * What came back: The review pointed out that several questions referenced
+    entities absent from `campus_life` (such as specific professor names,
+    "West Hall," and "Library Cafe") and noted that target phrases like
+    `"20 minutes"` do not match text explicitly stating `"20 to 25 minutes"`,
+    which would make evaluation scoring unreliable in Unit 2.
+  * What I changed: I replaced the placeholder questions and wrote 5 specific
+    test questions and `expects` target phrases derived directly from verified
+    entities, room reservation limits, and exact text in the `campus_life`
+    source files.
+    
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
